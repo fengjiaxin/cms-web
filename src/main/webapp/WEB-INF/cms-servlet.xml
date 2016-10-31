@@ -9,7 +9,7 @@
 	
 	<mvc:annotation-driven/>
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
-	<context:component-scan base-package="org.konghao.cms.controller"/>
+	<context:component-scan base-package="org.feng.cms.controller"/>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"/>
