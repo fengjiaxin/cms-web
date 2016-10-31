@@ -46,5 +46,14 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+		<filter>
+		<filter-name>SystemContextFilter</filter-name>
+		<filter-class>org.feng.cms.web.SystemContextFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SystemContextFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	
 </web-app>

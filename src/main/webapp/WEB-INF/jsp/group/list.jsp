@@ -25,7 +25,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${datas.datas }" var="group">
+		<c:forEach items="${groups.datas }" var="group">
 			<tr>
 				<td>${group.id }&nbsp;</td>
 				<td><a href="${group.id }" class="list_link">${group.name }</a></td>
@@ -45,7 +45,7 @@
 		<tr>
 			<td colspan="6" style="text-align:right;margin-right:10px;">
 			<jsp:include page="/jsp/pager.jsp">
-				<jsp:param value="${datas.total }" name="totalRecord"/>
+				<jsp:param value="${groups.total }" name="totalRecord"/>
 				<jsp:param value="groups" name="url"/>
 			</jsp:include>
 			</td>

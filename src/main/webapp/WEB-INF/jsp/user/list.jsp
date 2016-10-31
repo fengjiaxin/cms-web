@@ -27,7 +27,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${datas.datas }" var="user">
+		<c:forEach items="${users.datas }" var="user">
 			<tr>
 				<td>${user.id }&nbsp;</td>
 				<td><a href="${user.id }" class="list_link">${user.username }</a></td>
@@ -60,7 +60,7 @@
 		<tr>
 			<td colspan="6" style="text-align:right;margin-right:10px;">
 			<jsp:include page="/jsp/pager.jsp">
-				<jsp:param value="${datas.total }" name="totalRecord"/>
+				<jsp:param value="${users.total}" name="totalRecord"/>
 				<jsp:param value="users" name="url"/>
 			</jsp:include>
 			</td>
