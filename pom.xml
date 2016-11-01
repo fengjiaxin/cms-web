@@ -39,6 +39,14 @@
 	    	<artifactId>cms-user</artifactId>
 	    </dependency>
 	    <dependency>
+	    	<groupId>${project.groupId}</groupId>
+	    	<artifactId>cms-topic</artifactId>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.feng.basic</groupId>
+	      <artifactId>basic-common</artifactId>
+	    </dependency>
+	    <dependency>
 		  <groupId>jsptags</groupId>
 		  <artifactId>pager-taglib</artifactId>
 		</dependency>

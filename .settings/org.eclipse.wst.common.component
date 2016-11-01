@@ -13,6 +13,12 @@
         <dependent-module archiveName="cms-user-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cms-user/cms-user">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="cms-topic-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cms-topic/cms-topic">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="basic-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/basic-common/basic-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="cms-web"/>
         <property name="java-output-path" value="/cms-web/target/classes"/>
     </wb-module>

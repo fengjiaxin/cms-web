@@ -1,9 +1,6 @@
 package org.feng.cms.controller;
 
 import javax.inject.Inject;
-import javax.validation.Valid;
-
-import org.feng.basic.util.EnumUtils;
 import org.feng.cms.model.Group;
 import org.feng.cms.service.IGroupService;
 import org.feng.cms.service.IUserService;
