@@ -1,6 +1,10 @@
 package org.feng.cms.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
+
+import org.feng.cms.model.ChannelTree;
 import org.feng.cms.model.Group;
 import org.feng.cms.service.IGroupService;
 import org.feng.cms.service.IUserService;
@@ -11,6 +15,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(value ="/admin/group")
@@ -89,6 +94,22 @@ public class GroupController {
 		groupService.update(og);
 		return "redirect:/admin/group/groups";
 	}
-
+	
+	@RequestMapping("/listChannels/{gid}")
+	public String listChannels(@PathVariable int gid,Model model){
+		model.addAttribute(groupService.load(gid));
+		return "/group/listChannel";
+	}
+	@RequestMapping("/groupChannels/{gid}")
+	public @ResponseBody List<ChannelTree> groupTree(@PathVariable Integer gid){
+		return groupService.generateGroupChannelTree(gid);
+	}
+	
+	@RequestMapping("/setChannels/{gid}")
+	public String setChannels(@PathVariable int gid,Model model){
+		model.addAttribute(groupService.load(gid));
+		model.addAttribute("cids", groupService.listGroupChannelIds(gid));
+		return "/group/setChannel";
+	}
 	
 }

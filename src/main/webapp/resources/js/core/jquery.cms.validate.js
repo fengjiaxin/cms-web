@@ -4,6 +4,7 @@
 		var __rules = $.extend({
 			username:"required",
 			password:"required",
+			name:"required",
 			confirmPwd:{
 				equalTo:"#password"
 			},
@@ -13,7 +14,8 @@
 			username:"用户名不能为空",
 			password:"用户密码不能为空",
 			confirmPwd:"两次输入的密码不正确",
-			email:"邮件格式不正确"
+			email:"邮件格式不正确",
+			name:"名称不能为空"
 		},opts?(opts.messages||{}):{});
 		var __defaultOpts = $.extend(opts||{},{
 			rules:__rules,

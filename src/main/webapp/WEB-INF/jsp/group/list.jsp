@@ -25,7 +25,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${groups.datas }" var="group">
+		<c:forEach items="${datas.datas }" var="group">
 			<tr>
 				<td>${group.id }&nbsp;</td>
 				<td><a href="${group.id }" class="list_link">${group.name }</a></td>
@@ -34,8 +34,8 @@
 					<a href="delete/${group.id }" class="list_op delete">删除</a>
 					<a href="update/${group.id }" class="list_op">更新</a>
 					<a href="clearUsers/${group.id }" class="list_op delete">清空用户</a>
-					<a href="<%=request.getContextPath() %>/admin/channel/userchannels/${user.id }" class="list_op">查询管理栏目</a>
-					<a href="<%=request.getContextPath() %>/admin/channel/userchannels/${user.id }" class="list_op">设置管理栏目</a>
+					<a href="<%=request.getContextPath() %>/admin/group/listChannels/${group.id }" class="list_op">查询管理栏目</a>
+					<a href="<%=request.getContextPath() %>/admin/group/setChannels/${group.id }" class="list_op">设置管理栏目</a>
 				&nbsp;
 				</td>
 			</tr>
@@ -45,7 +45,7 @@
 		<tr>
 			<td colspan="6" style="text-align:right;margin-right:10px;">
 			<jsp:include page="/jsp/pager.jsp">
-				<jsp:param value="${groups.total }" name="totalRecord"/>
+				<jsp:param value="${datas.total }" name="totalRecord"/>
 				<jsp:param value="groups" name="url"/>
 			</jsp:include>
 			</td>

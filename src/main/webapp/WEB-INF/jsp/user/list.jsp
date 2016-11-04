@@ -27,7 +27,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${users.datas }" var="user">
+		<c:forEach items="${datas.datas }" var="user">
 			<tr>
 				<td>${user.id }&nbsp;</td>
 				<td><a href="${user.id }" class="list_link">${user.username }</a></td>
@@ -50,7 +50,7 @@
 				<td>
 					<a href="delete/${user.id }" title="${user.id }" class="list_op delete">删除</a>
 					<a href="update/${user.id }" class="list_op">更新</a>
-					<a href="<%=request.getContextPath() %>/admin/channel/userchannels/${user.id }" class="list_op">管理栏目</a>
+					<a href="<%=request.getContextPath() %>/admin/user/listChannels/${user.id }" class="list_op">管理栏目</a>
 				&nbsp;
 				</td>
 			</tr>
@@ -60,7 +60,7 @@
 		<tr>
 			<td colspan="6" style="text-align:right;margin-right:10px;">
 			<jsp:include page="/jsp/pager.jsp">
-				<jsp:param value="${users.total}" name="totalRecord"/>
+				<jsp:param value="${datas.total }" name="totalRecord"/>
 				<jsp:param value="users" name="url"/>
 			</jsp:include>
 			</td>

@@ -31,13 +31,12 @@ $(function(){
 		<a href="<%=request.getContextPath() %>/admin/role/roles" target="content">用户角色管理</a>
 	</li>
 </ul>
-
 <ul class="navMenu navSelected">
 	<h3 class="navTitle">
 		<span class="navTilteTxt">文章管理</span>
 	</h3>
 	<li class="navChild">
-		<a href="<%=request.getContextPath() %>/admin/channel/cm" target="content">栏目信息管理</a>
+		<a href="<%=request.getContextPath() %>/admin/channel/channels" target="content">栏目信息管理</a>
 	</li>
 	<li class="navChild">
 		<a href="<%=request.getContextPath() %>/admin/article/publishs" target="content">文章信息管理</a>
@@ -63,6 +62,7 @@ $(function(){
 			<a href="<%=request.getContextPath() %>/admin/systemClean/articleList" target="content">系统清理管理</a>
 		</li>
 	</ul>
+
 		</div>
 </body>
 </html>

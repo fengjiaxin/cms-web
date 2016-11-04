@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/css/admin/main.css"/>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/admin/cms_inc.js"></script>
 <script type="text/javascript">
-$(function(){
-	$.cms_inc.showDate($("#showDate"));
-});
 function exitSystem() {
 	//alert($("#contextPath").val()+"/admin/logout");
 	window.parent.location.href = $("#contextPath").val()+"/admin/logout";
